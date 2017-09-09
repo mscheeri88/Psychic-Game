@@ -2,14 +2,17 @@
 
 
 body{
-    background-color: rgb(138, 138, 195);
+    background-color: rgb(12, 65, 13);
     text-align: left;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-size: 30px;
   }
   
   h1{
-    color: #053713;
+    color: #356C8F;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 35px;
+    font-size: 70px;
     text-align: center;
     font-weight: bold;
 }
@@ -22,11 +25,13 @@ body{
     text-align: center; 
   }
  .container{
-   border: 5px solid #495445;
    width: 500px;
    height: 500px;
    margin: auto;
    font-size: 25px;
+   text-align: center;
+   line-height: 300%;
+   font-size: 30px;
  }
 
 

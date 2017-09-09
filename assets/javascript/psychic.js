@@ -17,15 +17,17 @@ function reset(){
     computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
     console.log("computersGuess" + computerGuess);
 };
+
+
 // This function is run whenever the user presses a key.
 document.onkeyup = function(event) {
 
-
-
-var noGuess = guessedLetters.indexOf(userGuess);
-var userGuess = event.key;
-    console.log(userGuess);  
-    console.log(guessedLetters);
+var inp = String.fromCharCode(event.keyCode);    
+var userGuess = event.key;  
+var aGuess = guessedLetters.indexOf(userGuess);
+    console.log("already guess" + aGuess);
+    console.log("user guess" + userGuess);  
+    console.log("guessed letter" + guessedLetters);
 
             
             if (userGuess == computerGuess){
@@ -33,14 +35,14 @@ var userGuess = event.key;
                 reset();
             };
             
-            if (userGuess !== computerGuess && noGuess == -1){
+            if ((aGuess == "-1") && userGuess !== computerGuess && userGuess){
                 guessRemain --;
                 guessedLetters.push(userGuess);
+                
             };
-            // } else {
-            //     guessRemain --;
 
-            // }
+            // if (/[a-zA-Z]/.test(inp))
+            //     alert("input was a letter, number, hyphen, underscore or space");
             
             if (guessRemain === 0){
                     losses++;
